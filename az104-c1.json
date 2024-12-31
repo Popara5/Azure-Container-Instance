@@ -1,0 +1,92 @@
+{
+    "apiVersion": "2021-03-01",
+    "id": "/subscriptions/c026ac07-ffac-4e08-b69c-9240e6d12833/resourceGroups/az104-rg9/providers/Microsoft.ContainerInstance/containerGroups/az104-c1",
+    "name": "az104-c1",
+    "type": "microsoft.containerinstance/containergroups",
+    "location": "eastus",
+    "tags": {},
+    "properties": {
+        "sku": "Standard",
+        "isCreatedFromStandbyPool": false,
+        "provisioningState": "Succeeded",
+        "provisioningTimeoutInSeconds": 1800,
+        "isCustomProvisioningTimeout": false,
+        "containers": [
+            {
+                "name": "az104-c1",
+                "properties": {
+                    "image": "mcr.microsoft.com/azuredocs/aci-helloworld:latest",
+                    "ports": [
+                        {
+                            "protocol": "TCP",
+                            "port": 80
+                        }
+                    ],
+                    "environmentVariables": [],
+                    "configMap": {
+                        "keyValuePairs": {}
+                    },
+                    "instanceView": {
+                        "restartCount": 0,
+                        "currentState": {
+                            "state": "Running",
+                            "startTime": "2024-12-31T16:28:27.52Z",
+                            "detailStatus": ""
+                        },
+                        "events": [
+                            {
+                                "count": 1,
+                                "firstTimestamp": "2024-12-31T16:28:16Z",
+                                "lastTimestamp": "2024-12-31T16:28:16Z",
+                                "name": "Pulling",
+                                "message": "pulling image \"mcr.microsoft.com/azuredocs/aci-helloworld@sha256:b9cec4d6b50c6bf25e3f7f93bdc1628e5dca972cf132d38ed8f5bc955bb179c3\"",
+                                "type": "Normal"
+                            },
+                            {
+                                "count": 1,
+                                "firstTimestamp": "2024-12-31T16:28:19Z",
+                                "lastTimestamp": "2024-12-31T16:28:19Z",
+                                "name": "Pulled",
+                                "message": "Successfully pulled image \"mcr.microsoft.com/azuredocs/aci-helloworld@sha256:b9cec4d6b50c6bf25e3f7f93bdc1628e5dca972cf132d38ed8f5bc955bb179c3\"",
+                                "type": "Normal"
+                            },
+                            {
+                                "count": 1,
+                                "firstTimestamp": "2024-12-31T16:28:27Z",
+                                "lastTimestamp": "2024-12-31T16:28:27Z",
+                                "name": "Started",
+                                "message": "Started container",
+                                "type": "Normal"
+                            }
+                        ]
+                    },
+                    "resources": {
+                        "requests": {
+                            "memoryInGB": 1.5,
+                            "cpu": 1
+                        }
+                    }
+                }
+            }
+        ],
+        "initContainers": [],
+        "restartPolicy": "OnFailure",
+        "ipAddress": {
+            "ports": [
+                {
+                    "protocol": "TCP",
+                    "port": 80
+                }
+            ],
+            "ip": "48.217.216.177",
+            "type": "Public",
+            "dnsNameLabel": "az104-containerinstance",
+            "fqdn": "az104-containerinstance.bvbgbhhvgtehh7dx.eastus.azurecontainer.io"
+        },
+        "osType": "Linux",
+        "instanceView": {
+            "events": [],
+            "state": "Running"
+        }
+    }
+}
